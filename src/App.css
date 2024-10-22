@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Kanban board layout */
+.kanban-board {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f9fafb;
+}
+
+/* Each column styling */
+.kanban-column {
+  border-radius: 8px;
+  padding: 10px;
+  flex: 1;
+  max-width: 250px;
+}
+
+/* Column title styling */
+.kanban-column h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Avatar with user initials at the top */
+.user-initials {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 14px;
+  font-weight: 600;
   color: white;
+  background-color: #f0f0f0;
 }
 
-.App-link {
-  color: #61dafb;
+/* Avatar container (align avatar with user name) */
+.user-avatar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* User name text next to avatar */
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Ticket card styling */
+.ticket-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.ticket-card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Ticket header with ID and avatar */
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ticket ID styling */
+.ticket-id {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Ticket title */
+.ticket-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Tag styling (Feature Request) */
+.ticket-tag {
+  display: inline-block;
+  background-color: #eef2f7;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #d0d5dd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Dropdown button */
+.display-button {
+  background-color: #f8f9fa;
+  border: 1px solid #d0d5dd;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.display-button:hover {
+  background-color: #e2e8f0;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #d0d5dd;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 10;
+}
+
+/* Dropdown item */
+.dropdown-item {
+  margin-bottom: 10px;
+}
+
+.dropdown-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #888;
+}
+
+.dropdown-item select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #d0d5dd;
+  background-color: #f9fafb;
+  font-size: 14px;
+}
+
+.dropdown-item select:focus {
+  outline: none;
+  border-color: #94a3b8;
 }
